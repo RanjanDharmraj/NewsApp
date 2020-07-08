@@ -1,0 +1,95 @@
+ext {
+    gradlePluginVersion = '4.0.0'
+    ARTIFACTORY_HOST = 'https://artifacts.gitlab.myteksi.net/artifactory'
+    projectMinSdkVersion = 19
+    compileVersionSdk = 29
+    targetSdkVersion = compileVersionSdk
+    projectVersionCode = 1
+    projectVersionName = "0.0.1"
+
+    kotlinVersion = '1.3.72'
+    kotlinSdk = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+    androidXVersion = '1.0.0'
+    androidXCompatVersion = '1.1.0'
+    androidXConstraintLayoutVersion = '1.1.3'
+    androidXMultidexVersion = '2.0.0'
+    androidSupportV4Version = "1.0.0"
+    droid = [
+            androidAppCompatV7      : "androidx.appcompat:appcompat:$androidXCompatVersion",
+            androidDesign           : "com.google.android.material:material:$androidXVersion",
+            androidCardview         : "androidx.cardview:cardview:$androidXVersion",
+            androidRecyclerview     : "androidx.recyclerview:recyclerview:$androidXVersion",
+            androidSupportAnnotation: "androidx.annotation:annotation:$androidXVersion",
+            androidConstraint       : "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion",
+            androidMultidex         : "androidx.multidex:multidex:$androidXMultidexVersion",
+            fragment                : "androidx.fragment:fragment:$androidSupportV4Version",
+            databinding             : "androidx.databinding:databinding-common:$gradlePluginVersion",
+            databindingBase         : "androidx.databinding:databinding-runtime:$gradlePluginVersion"
+    ]
+
+    daggerVersion = '2.24'
+    di = [
+            dagger       : "com.google.dagger:dagger:$daggerVersion",
+            daggerAndroid: "com.google.dagger:dagger-android-support:$daggerVersion"
+    ]
+
+    rxKotlinVersion = "2.4.0"
+    rxDatabindingsVersion = "1.9.0"
+    rxAndroidVersion = "2.1.1"
+    rxJava2Version = '2.2.12'
+    rx = [
+            rxAndroid    : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            rxDatabinding: "com.stepango.rxdatabindings:rxdatabindings:$rxDatabindingsVersion",
+            rxKotlin     : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxjava2      : "io.reactivex.rxjava2:rxjava:$rxJava2Version",
+    ]
+
+    okioVersion = '2.4.3'
+    okHttpVersion = '3.12.1'
+    retrofitVersion = '2.6.0'
+    network = [
+            okio                   : "com.squareup.okio:okio:$okioVersion",
+            retrofit               : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitRxJava2Adapter : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            okHttp                 : "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            okHttpLogginInterceptor: "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
+            retrofitConverterGson  : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+    ]
+
+    glideVersion = "4.11.0"
+    gsonVersion = "2.8.5"
+    externalLibs = [
+            glide : "com.github.bumptech.glide:glide:$glideVersion",
+            gson  : "com.google.code.gson:gson:$gsonVersion"
+    ]
+
+
+    kaptLibs = [
+            daggerCompiler        : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:${daggerVersion}"
+    ]
+
+    coroutinesVersion = "1.3.3"
+    viewModelScopeVersion = "2.2.0"
+    coroutines = [
+            coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            coroutinesRx     : "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$coroutinesVersion",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
+            viewModelscope   : "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelScopeVersion"
+    ]
+
+    jUnitVersion = "4.12"
+    mockitoVersion = "3.2.4"
+    hamcrestVersion = "1.3"
+    assertjVersion = "3.14.0"
+    mockitoKotlinVersion = "1.6.0"
+    testLibs = [
+            jUnit         : "junit:junit:" + jUnitVersion,
+            mockito       : "org.mockito:mockito-core:" + mockitoVersion,
+            mockitoAndroid: "org.mockito:mockito-android:" + mockitoVersion,
+            mokitoKotlin  : "com.nhaarman:mockito-kotlin:" + mockitoKotlinVersion,
+            hamcrest      : "org.hamcrest:hamcrest-all:" + hamcrestVersion,
+            assertj       : "org.assertj:assertj-core:" + assertjVersion
+    ]
+}

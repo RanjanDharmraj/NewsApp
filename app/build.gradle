@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion compileVersionSdk
+
+    defaultConfig {
+        applicationId "com.dreamsunited.newsapp"
+        minSdkVersion projectMinSdkVersion
+        targetSdkVersion targetSdkVersion
+        versionCode projectVersionCode
+        versionName projectVersionName
+
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation kotlinSdk
+    kaptLibs.values().forEach { kapt it }
+    droid.values().forEach { implementation it }
+    di.values().forEach { implementation it }
+    rx.values().forEach { implementation it }
+    network.values().forEach { implementation it }
+    externalLibs.values().forEach { implementation it }
+    coroutines.values().forEach { implementation it }
+}

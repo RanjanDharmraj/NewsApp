@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SkeletonShimmer">
+        <attr name="skeleton_shimmer_color" format="color|reference" />
+        <attr name="skeleton_shimmer_animation_duration" format="integer|reference" />
+        <attr name="skeleton_shimmer_auto_start" format="boolean" />
+        <attr name="skeleton_shimmer_angle" format="integer|reference" />
+        <attr name="skeleton_shimmer_width" format="float|reference" />
+        <attr name="skeleton_shimmer_gradient_relative_width" format="float|reference" />
+        <attr name="skeleton_shimmer_reverse_animation" format="boolean|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="JumpingDotsLoaderView">
+        <attr name="dot_radius" format="dimension" />
+        <attr name="number_of_dots" format="integer" />
+        <attr name="dots_space" format="dimension" />
+        <attr name="jump_duration" format="integer" />
+        <attr name="jump_start_delay" format="integer" />
+        <attr name="color_duration" format="integer" />
+        <attr name="jump_height" format="dimension" />
+        <attr name="color_dark" format="color" />
+        <attr name="color_medium" format="color" />
+        <attr name="color_light" format="color" />
+    </declare-styleable>
+
+</resources>

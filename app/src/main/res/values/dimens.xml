@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="JumpingDotsLoaderView_jump_height_default">16dp</dimen>
+    <dimen name="JumpingDotsLoaderView_dots_space_default">8dp</dimen>
+    <dimen name="JumpingDotsLoaderView_dots_radius_default">3dp</dimen>
+    <dimen name="loader_dimen">56dp</dimen>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="articles"
+            type="com.dreamsunited.newsapp.model.Articles" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            tools:ignore="MissingPrefix">
+
+            <com.dreamsunited.newsapp.view.loadable.LoadableImageView
+                android:id="@+id/iv_news"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:loadUri="@{articles.imageUrl}"
+                android:scaleType="center" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_below="@+id/iv_news"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="#000000"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_headline_title"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_gravity="top"
+                android:maxLines="3"
+                android:text="@{articles.title}"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                tools:text="Electronic Entertainment: Which Types of Entertainment Platforms Rock Today" />
+
+            <RelativeLayout
+                android:id="@+id/rl_source_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_headline_title"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_headline_source"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="@{articles.getDisplayDate()}"
+                    android:padding="4.5dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:text="Wired" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

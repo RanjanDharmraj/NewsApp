@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="shimmer_default_color">#50CCCCCC</color>
+    <color name="color_ccd6dd">#ccd6dd</color>
+    <color name="color_f0efef">#F0EFEF</color>
+    <color name="color_ffffff_ff">#FFFFFFFF</color>
+    <color name="color_ffffff_33">#33FFFFFF</color>
+    <color name="color_ffffff_f2">#F2FFFFFF</color>
+</resources>
