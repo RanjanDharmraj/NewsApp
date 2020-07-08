@@ -1,6 +1,7 @@
 # NewsApp
 
-Used Download Library List: Glide
+Used Download Library: Glide
+
 Custom library: JumpingDotsLoaderView, LoadableImageView, SkeletonShimmerLayout
  
 Scope level dependency handling using Dagger-2
